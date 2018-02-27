@@ -1,0 +1,88 @@
+<html>
+<body>
+<div id="wrapper">
+    <div class="header">
+        <div class="qr-core">
+            <p class="mp-invoice-barcode">
+                <barcode code="{{var shipment.increment_id}}" type="QR" size="0.8" error="M" disableborder="1"/>
+            </p>
+        </div>
+        <div class="logo">
+            <a class="logo" href="{{store url=""}}">
+            <img
+                    width="{{var businessInformation.getLogoWidth()}}"
+                    height="{{var businessInformation.getLogoHeight()}}"
+                    src="{{var logo_url}}"
+                    alt="{{var logo_alt}}"
+                    border="0"
+            />
+            </a>
+        </div>
+        <div class="clr"></div>
+    </div>
+    <div class="content">
+        <div class="date">
+            <h3>{{trans "Shipment"}}</h3>
+            <p>{{var pdfInvoiceCustom.formatDate($shipment.created_at)}}</p>
+        </div>
+        <div class="store-infor">
+            <div class="business-information">
+                <p class="business-name">{{var businessInformation.getCompany()}}</p>
+                <p>{{var businessInformation.getAddress()}}</p>
+                <p>{{var businessInformation.getPhone()}}</p>
+                <p>{{var businessInformation.getVatNumber()}}</p>
+                <p>{{var businessInformation.getContact()}}</p>
+                <p>{{var businessInformation.getRegistered()}}</p>
+            </div>
+        </div>
+        <div class="clr"></div>
+        <div class="invoice-id">
+            <h1><span>{{trans "No #"}}</span><b>{{var shipment.increment_id}}</b></h1>
+        </div>
+        <div class="address">
+            <div class="customer">
+                {{depend order.getIsNotVirtual()}}
+                <div class="section-left">
+                    <div class="billing-info">
+                        <h3>{{trans "SHIPPING ADDRESS"}}</h3>
+                        <p>{{var formattedShippingAddress|raw}}</p>
+                    </div>
+                </div>
+                {{/depend}}
+            </div>
+            <div class="billing-info">
+                <h3>{{trans "BILLING ADDRESS"}}</h3>
+                <p>{{var formattedBillingAddress|raw}}</p>
+            </div>
+        </div>
+        <div class="clr"></div>
+        <div class="items">
+            {{layout area="frontend" handle="pdfinvoice_order_shipment_items" shipment=$shipment order=$order}}
+        </div>
+        <div class="clr"></div>
+        <div class="address">
+            <div class="payment">
+                <h5>{{trans "PAYMENT METHOD"}}</h5>
+                <span>{{var payment_title|raw}}</span>
+            </div>
+            {{depend order.getIsNotVirtual()}}
+            <div class="shipping-method">
+                <h5>{{trans "SHIPPING METHOD"}}</h5>
+                <span>{{var order.getShippingDescription()}}</span>
+            </div>
+            {{/depend}}
+        </div>
+        <div class="clr"></div>
+    </div>
+    <footer>
+        {{depend shipmentNote}}
+        <div class="note">
+            <h3>{{trans "Note : "}}</h3>
+            <p>{{var shipmentNote|raw}}</p>
+        </div>
+        {{/depend}}
+        <div class="end"></div>
+    </footer>
+</div>
+</body>
+</html>

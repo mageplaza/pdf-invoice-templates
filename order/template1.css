@@ -1,0 +1,145 @@
+*{
+    padding:0;
+    margin:0;
+}
+h1,h2,h3,h4,h5,h6,p{
+    padding:0;
+    margin:0;
+}
+#wrapper{
+    margin:20px;
+}
+.clr{
+    clear:both;
+}
+/******* HEADER **********/
+.header-left,.header-right,.footer-left{
+    width:50%;
+    float:left;
+}
+img{
+    margin-top:30px;
+}
+.business-information{
+    margin-top:5px;
+}
+.info{
+    margin-left:30px;
+    padding-top:28px;
+}
+
+/******* END HEADER **********/
+
+/********** CONTENT **********/
+.billing-address,.shipping-address,.payment-method,.shipping-method{
+    float:left;
+    width:50%;
+    color:black;
+}
+.billing-address p,.shipping-address p,.payment-method p,.shipping-method p{
+    margin-left:5px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+.content{
+    padding-top:30px;
+}
+.mp-block-heading{
+    width: 98% !important;
+    padding: 5px 0px 5px 5px;
+    color:#FFF;
+}
+
+.mp-block-heading,.mp-note,.mp-heading{
+background-color: {{var pdfInvoiceDesign.getHeadingColor()}};
+}
+
+/* Css table items */
+.table{
+    width:100%;
+}
+.header-table{
+    width:100%;
+    height:100%;
+}
+.mp-item{
+    width:59%;
+    float:left;
+    padding:6px 0px;
+}
+.mp-qty,.mp-price,.mp-subtotal{
+    width:13%;
+    float:left;
+    text-align:center;
+    padding:6px 0px;
+
+}
+.mp-heading{
+    width:100%;
+    height:32px;
+    color:#FFF;
+}
+.mp-heading span{
+    font-weight:bold;
+}
+.mp-item{
+    padding-left:5px
+}
+.order-totals{
+    text-align: right;
+    margin-top:20px;
+}
+.mp{
+    width: 100%;
+    height: 35px;
+}
+.mp-str{
+    font-weight: bold;
+    width: 80%;
+    float: left;
+}
+.mp-right{
+    width: 18%;
+    float: left;
+}
+/* End css table items*/
+
+/********** END CONTENT **********/
+
+footer{
+    margin-top:30px;
+}
+.footer-left{
+    width:50%;
+}
+.mp-note{
+    color:#FFF;
+    padding-left: 3px;
+}
+/*for barcode*/
+.mp-item-bc{
+    width:44%;
+    float:left;
+    padding:6px 0px 6px 5px;
+}
+.mp-barcode-bc{
+    width: 30%;
+    float: left;
+    padding:6px 0px;
+}
+.mp-barcode-bc p{
+    text-align: right;
+}
+.mp-qty-bc,.mp-price-bc,.mp-subtotal-bc{
+    width:10%;
+    float:left;
+    text-align:center;
+    padding:6px 0px;
+}
+.mp-qty-bc{
+    width:5%;
+    float:left;
+    text-align:center;
+    padding:6px 0px;
+}
+/*end for barcode*/

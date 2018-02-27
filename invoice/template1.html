@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<body>
+<div id="wrapper">
+    <div class="header">
+        <div class="header-left">
+            <div class="logo-left">
+                <a class="logo" href="{{store url=""}}">
+                <img
+                        width="{{var businessInformation.getLogoWidth()}}"
+                        height="{{var businessInformation.getLogoHeight()}}"
+                        src="{{var logo_url}}"
+                        alt="{{var logo_alt}}"
+                        border="0"
+                />
+                </a>
+            </div>
+            <div class="business-information">
+                <p class="business-name">{{var businessInformation.getCompany()}}</p>
+                <p>{{trans "Address"}}: {{var businessInformation.getAddress()}}</p>
+                <p>{{trans "Phone"}}: {{var businessInformation.getPhone()}}</p>
+                <p>{{trans "Tax ID"}} {{var businessInformation.getVatNumber()}}</p>
+                <p>{{trans "Contact"}}: {{var businessInformation.getContact()}}</p>
+                <p>{{trans "Registered"}}: {{var businessInformation.getRegistered()}}</p>
+            </div>
+        </div>
+        <div class="header-right">
+            <div class="info">
+                <h1 class="info-title">{{trans "INVOICE"}}</h1>
+                <p>{{trans "Invoice "}} <b>#{{var invoice.increment_id}}</b></p>
+                <p>{{trans "Date : "}} <b>{{var pdfInvoiceCustom.formatDate($invoice.created_at)}}</b></p>
+                <p>{{trans "Amount : "}}<b>{{var order.formatPrice($invoice.getGrandTotal())|raw }}</b></p>
+                <!-- BARCODE: Sugest Type: C39/EAN128A -->
+                <p class="mp-invoice-barcode">
+                    <barcode code="{{var invoice.increment_id}}" type="C39"/>
+                </p>
+                <!-- QRCODE -->
+                <!-- <p class="mp-invoice-barcode"><barcode code="{{var invoice.increment_id}}" type="QR" size="0.8" error="M" disableborder="1"  /></p> -->
+                <!-- Sugest Type:-->
+            </div>
+        </div>
+    </div>
+    <div class="clr"></div>
+    <div class="content">
+        <div class="address">
+            <div class="billing-address">
+                <h3 class="mp-block-heading">{{trans "Billing Address"}}</h3>
+                <p>{{var formattedBillingAddress|raw}}</p>
+            </div>
+            <div class="payment-method">
+                <h3 class="mp-block-heading">{{trans "Payment Method"}}</h3>
+                <p>{{var payment_title|raw}}</p>
+            </div>
+        </div>
+        <div class="clr"></div>
+    </div>
+    {{layout handle="pdfinvoice_order_invoice_items" invoice=$invoice order=$order itemBarcode=1}}
+    <footer>
+        {{depend invoiceNote}}
+        <div class="footer-left">
+            <h3 class="mp-note">{{trans "Notes"}}:</h3>
+            <span style="font-style: italic;">{{var invoiceNote|raw}}</span>
+        </div>
+        {{/depend}}
+    </footer>
+</div>
+</body>
+</html>

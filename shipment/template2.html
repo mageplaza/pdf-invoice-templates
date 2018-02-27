@@ -1,0 +1,117 @@
+<html>
+<body>
+<div id="wrapper">
+    <div class="header">
+        <div class="header-left">
+            <div class="address">
+                <div class="info">
+                    <h4>{{trans "Address"}}</h4>
+                    <ul>
+                        <li>{{trans "Address(1) Line Here"}}</li>
+                        <li>{{trans "Address(2) Line Here"}}</li>
+                        <li>{{trans "Cty Here, Country"}}</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="phone">
+                <div class="info">
+                    <h4>{{trans "Phone"}}</h4>
+                    <ul>
+                        <li>{{trans "P: +12 34 567 0001"}}</li>
+                        <li>{{trans "+12 34 567 0002"}}</li>
+                        <li>{{trans "+12 34 567 0003"}}</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="address">
+                <div class="info">
+                    <h4>{{trans "Email"}}</h4>
+                    <ul>
+                        <li>{{trans "contact@mageplaza.com"}}</li>
+                        <li>{{trans "support@mageplaza.com"}}</li>
+                        <li>{{trans "www.mageplaza.com"}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="header-right">
+            <div class="logo-right">
+                <a class="logo" href="{{store url=""}}">
+                <img
+                        width="{{var businessInformation.getLogoWidth()}}"
+                        height="{{var businessInformation.getLogoHeight()}}"
+                        src="{{var logo_white_url}}"
+                        alt="{{var logo_alt}}"
+                        border="0"
+                />
+                </a>
+            </div>
+        </div>
+        <div class="clr"></div>
+    </div>
+    <div class="content">
+        <nav>
+            <div class="heading">
+                <h1>{{trans "SHIPMENT"}}</h1>
+            </div>
+            <div class="heading-right">
+                <div class="invoice-id">
+                    <span>{{trans "Shipment: #"}}</span><b>{{var shipment.increment_id}}</b>
+                </div>
+                <div class="invoice-date">
+                    <span>{{trans "Date: "}}</span><b>{{var pdfInvoiceCustom.formatDate($shipment.created_at)}}</b>
+                </div>
+            </div>
+        </nav>
+        <div class="contnet-top">
+            <div class="section-left">
+                <div class="billing-info">
+                    <h3>{{trans "BILLING ADDRESS"}}</h3>
+                    <p>{{var formattedBillingAddress|raw}}</p>
+                </div>
+            </div>
+            <div class="section-right">
+                <div class="payment-method">
+                    <h3>{{trans "PAYMENT METHOD"}}</h3>
+                    <span>{{var payment_title|raw}}</span>
+                </div>
+            </div>
+            <div class="clr"></div>
+            {{depend order.getIsNotVirtual()}}
+            <div class="section-left">
+                <div class="shipping-info">
+                    <h3>{{trans "SHIPPING ADDRESS"}}</h3>
+                    <p>{{var formattedShippingAddress|raw}}</p>
+                </div>
+            </div>
+            <div class="section-right">
+                <div class="shipping-method">
+                    <h3>{{trans "SHIPPING METHOD"}}</h3>
+                    <span>{{var order.getShippingDescription()}}</span>
+                </div>
+            </div>
+            {{/depend}}
+            <div class="clr"></div>
+        </div>
+        <div class="items">
+            {{layout handle="pdfinvoice_order_shipment_items" shipment=$shipment order=$order}}
+        </div>
+    </div>
+    <footer>
+        {{depend shipmentNote}}
+        <div class="footer-left">
+            <h3>{{trans "Notes"}}</h3>
+            <span><i>{{var shipmentNote}} </i></span>
+        </div>
+        {{/depend}}
+        <div class="footer-right">
+            <div class="bar-code">
+                <p class="mp-invoice-barcode">
+                    <barcode code="{{var shipment.increment_id}}" type="QR" size="0.8" error="M" disableborder="1"/>
+                </p>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

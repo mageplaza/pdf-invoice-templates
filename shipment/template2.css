@@ -1,0 +1,168 @@
+*{
+    padding:0;
+    margin:0;
+}
+h1,h2,h3,h4,h5,h6,p{
+    padding:0;
+    margin:0;
+}
+.content nav,table thead tr,.mp-heading{
+background:{{var pdfInvoiceDesign.getHeadingColor()}};
+}
+
+.header-left .info h4{
+color: {{var pdfInvoiceDesign.getHeadingColor()}};
+}
+.header{
+    background:#4c4a4b;
+    height:150px;
+}
+.content nav{
+    height: 69px;
+}
+.content nav h1{
+    margin-left:50px;
+    line-height:70px;
+}
+.clr{
+    clear:both;
+}
+.header-left{
+    width:69%;
+    height:150px;
+
+    float:left;
+}
+.address,.phone,.address{
+    width:33.33%;
+    float:left;
+}
+.header-right{
+    width:30%;
+    float:left;
+    height: 150px;
+}
+ul{
+    padding:0 !important;
+    margin:0 !important;
+}
+ul li{
+    list-style:none;
+}
+.logoright a{
+    text-align:centerl
+}
+.logo-right{
+    height: 150px;
+}
+.header-left .info{
+    margin: 40px 0px 0px 30px;
+    font-size: 12px;
+
+}
+.header-left .info ul li{
+    color:white;
+}
+
+.info{
+    padding-top:30px;
+}
+.contnet-top,.items,footer{
+    padding:30px 50px
+}
+.section-right{
+    float:right;
+    width:50%;
+    height:100px;
+    text-align:right;
+}
+.section-left{
+    float:left;
+    width:50%;
+    height:100px;
+}
+
+.odd{
+    background:#f1f0f0;
+}
+.even{
+    background:#ddd;
+}
+
+.heading{
+    float:left;
+    width:50%;
+    height:70px;
+}
+.heading-right{
+    float:right;
+    width:30%;
+    height:70px;
+}
+.invoice-id{
+    margin-top:10px;
+}
+img{
+    margin-top: 40px !important;
+    margin-left: 30px;
+}
+.clr{
+    clear:both;
+}
+
+.shipping-info h3,.billing-info h3,.payment-method h3,.shipping-method h3{
+    margin: 10px 0px 10px 0;
+}
+/* Css table items */
+.table{
+    width:100%;
+}
+.header-table{
+    width:100%;
+    height:100%;
+}
+.mp-item{
+    width:59%;
+    float:left;
+    padding:15px 0px;
+}
+.mp-qty,.mp-price,.mp-subtoal{
+    width:13%;
+    float:left;
+    text-align:center;
+    padding:15px 0px;
+
+}
+.mp-heading{
+    width:100%;
+    height:50px
+}
+.mp-heading span{
+    font-weight:bold;
+}
+.mp-item{
+    padding-left:5px
+}
+.order-totals{
+    text-align: right;
+    margin-top:20px;
+}
+.mp{
+    width: 100%;
+    height: 35px;
+}
+.mp-str{
+    font-weight: bold;
+    width: 78%;
+    float: left;
+}
+.mp-right{
+    width: 20%;
+    float: left;
+}
+/* End css table items*/
+
+.footer-left,.footer-right{
+    width:50%;
+    float:left;
+}

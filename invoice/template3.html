@@ -1,0 +1,73 @@
+<html>
+<body>
+<div id="wrapper">
+    <div class="header">
+        <div class="qr-core">
+            <p class="mp-invoice-barcode">
+                <barcode code="{{var invoice.increment_id}}" type="QR" size="0.8" error="M" disableborder="1"/>
+            </p>
+        </div>
+        <div class="logo">
+            <a class="logo" href="{{store url=""}}">
+            <img
+                    width="{{var businessInformation.getLogoWidth()}}"
+                    height="{{var businessInformation.getLogoHeight()}}"
+                    src="{{var logo_url}}"
+                    alt="{{var logo_alt}}"
+                    border="0"
+            />
+            </a>
+        </div>
+        <div class="clr"></div>
+    </div>
+    <div class="content">
+        <div class="date">
+            <h3>{{trans "Invoice"}}</h3>
+            <p>{{var pdfInvoiceCustom.formatDate($invoice.created_at)}}</p>
+        </div>
+        <div class="store-infor">
+            <div class="business-information">
+                <p class="business-name">{{var businessInformation.getCompany()}}</p>
+                <p>{{var businessInformation.getAddress()}}</p>
+                <p>{{var businessInformation.getPhone()}}</p>
+                <p>{{var businessInformation.getVatNumber()}}</p>
+                <p>{{var businessInformation.getContact()}}</p>
+                <p>{{var businessInformation.getRegistered()}}</p>
+            </div>
+        </div>
+        <div class="clr"></div>
+        <div class="invoice-id">
+            <h1><span>{{trans "No #"}}</span><b>{{var invoice.increment_id}}</b></h1>
+        </div>
+        <div class="address">
+            <div class="customer">
+                <p>{{trans "To: "}}</p>
+                <p>{{var order.getCustomerEmail()}}</p>
+            </div>
+            <div class="billing-info">
+                <h3>{{trans "BILLING ADDRESS"}}</h3>
+                <p>{{var formattedBillingAddress|raw}}</p>
+            </div>
+        </div>
+        <div class="clr"></div>
+        <div class="items">
+            {{layout area="frontend" handle="pdfinvoice_order_invoice_items3" invoice=$invoice order=$order itemBarcode=1}}
+        </div>
+        <div class="clr"></div>
+        <div class="payment">
+            <h5>{{trans "PAYMENT METHOD"}}</h5>
+            <span>{{var payment_title|raw}}</span>
+        </div>
+    </div>
+    <footer>
+        {{depend invoiceNote}}
+        <div class="note">
+            <h3>{{trans "Note :"}}</h3>
+            <p>{{var invoiceNote|raw}}</p>
+        </div>
+        {{/depend}}
+        <div class="end"></div>
+    </footer>
+</div>
+</body>
+</html>

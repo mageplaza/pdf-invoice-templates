@@ -1,0 +1,159 @@
+*{
+    padding:0;
+    margin:0;
+}
+h1,h2,h3,h4,h5,h6,p{
+    padding:0;
+    margin:0;
+}
+#wrapper{
+    margin:20px;
+    font-size: 11px;
+}
+.clr{
+    clear:both;
+}
+/******* HEADER **********/
+.header-left,.header-right,.footer-left{
+    width:50%;
+    float:left;
+}
+img{
+    margin-top:20px;
+}
+.business-information{
+    margin-top:5px;
+}
+.info{
+    margin-left:30px;
+    padding-top:20px;
+}
+
+/******* END HEADER **********/
+
+/********** CONTENT **********/
+.billing-address,.shipping-address{
+    float:left;
+    width:50%;
+    color:black;
+}
+.payment-method,.shipping-method{
+    float:left;
+    width:50%;
+    color:black;
+    padding-top: 10px;
+}
+.billing-address p,.shipping-address p,.payment-method p,.shipping-method p{
+    margin-left:5px;
+    margin-top:2px;
+    margin-bottom:2px;
+}
+.content{
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+.mp-block-heading{
+    width: 98% !important;
+    padding: 2px 0px 2px 5px;
+    color:#FFF;
+}
+
+.mp-block-heading,.mp-note,.mp-heading{
+background-color: {{var pdfInvoiceDesign.getHeadingColor()}};
+}
+
+/* Css table items */
+.table{
+    width:100%;
+}
+.header-table{
+    width:100%;
+    height:100%;
+}
+.mp-item{
+    width:50%;
+    float:left;
+    padding:3px 0px;
+}
+.mp-qty{
+    width:12.4%;
+    float:left;
+    text-align:center;
+    padding:2px 0px;
+}
+.mp-price,.mp-subtotal{
+    width:17.8%;
+    float:right;
+    text-align:right;
+    padding:2px 0px;
+    margin-right: 8px;
+}
+.mp-heading{
+    width:100%;
+    height:1px;
+    color:#FFF;
+}
+.mp-heading span{
+    font-weight:bold;
+}
+.mp-item{
+    padding-left:5px
+}
+.order-totals{
+    text-align: right;
+    margin-top:5px;
+}
+.mp{
+    width: 100%;
+    height: 5px;
+}
+.mp-str{
+    font-weight: bold;
+    width: 80%;
+    float: left;
+}
+.mp-right{
+    width: 18%;
+    float: left;
+}
+/* End css table items*/
+
+/********** END CONTENT **********/
+
+footer{
+    margin-top:5px;
+}
+.footer-left{
+    width:50%;
+}
+.mp-note{
+    color:#FFF;
+    padding-left: 3px;
+}
+/*for barcode*/
+.mp-item-bc{
+    width:44%;
+    float:left;
+    padding:2px 0px 2px 5px;
+}
+.mp-barcode-bc{
+    width: 30%;
+    float: left;
+    padding:2px 0px;
+}
+.mp-barcode-bc p{
+    text-align: right;
+}
+.mp-qty-bc,.mp-price-bc,.mp-subtotal-bc{
+    width:10%;
+    float:left;
+    text-align:right;
+    padding:2px 0px;
+}
+.mp-qty-bc{
+    width:5%;
+    float:left;
+    text-align:center;
+    padding:2px 0px;
+}
+/*end for barcode*/
