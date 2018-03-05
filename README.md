@@ -36,11 +36,11 @@ We’re sure you have known that Barcodes and QR codes are hi-tech trends and th
 
 To see this template in the backend, go ``Mageplaza > PDF Invoices: Manage Template > Default PDF Invoice: Edit``
 
- ![gif](https://i.imgur.com/7Hqs4Fy.gif)
+ ![pdfinvoice1](https://i.imgur.com/7Hqs4Fy.gif)
 
 You can preview the template by clicking **Preview**. Here is the designed template without any modifications.
 
-![i](https://i.imgur.com/PHQUA1W.jpg)
+![pdfinvoice2](https://i.imgur.com/PHQUA1W.jpg)
 
 Make sure that you’ve chosen the right template to print, go to ``Mageplaza > PDF Invoices: Configuration > Invoice``, in the **Select Template** field, choose “Default PDF Invoice”
 
@@ -49,24 +49,24 @@ Basically, the module will get the precise information on the order, and inform 
 
 In the backend demo, make your way to ``Mageplaza > PDF Invoices: Manage Templates``. Choose **Edit** for **Default PDF Order**. The form will be displayed and now you can make any customization in designing template as you want.
 
- ![i](https://i.imgur.com/iXYLhdi.gif)
+ ![pdforder1](https://i.imgur.com/iXYLhdi.gif)
 
 Here is the visual display of the Order template in the default:
 
-![i](https://i.imgur.com/XGUwmYR.jpg)
+![pdforder1](https://i.imgur.com/XGUwmYR.jpg)
 
 ### PDF Shipment template
 No one wishes their merchandises to be lost on the way, so delivery information should be taken into account carefully at the first place. If our module can mirror accurately shipping information on the printable file? Absolutely, this ease one will be the one size fits all. You can experience its compatibility that includes both Shipping Address and Billing Address on the paper amazingly.
 
 First, you can preview and edit the template at ``Mageplaza > PDF Invoices: Manage Template``, choose to edit the **Default PDF Shipment** file.
 
-![i](https://i.imgur.com/64lp6ca.gif)
+![pdfshipment1](https://i.imgur.com/64lp6ca.gif)
 
 Similar to the feature in the template for PDF Invoice and PDF Order, variables for Barcode and QR code also can be accepted here. You can take this advantage to enrich more information for your invoice more than it’s supposed.
 
 This is the available template for shipment invoices. 
 
-![i](https://i.imgur.com/NLR9S1t.jpg)
+![pdfshipment2](https://i.imgur.com/NLR9S1t.jpg)
  
 
 ### PDF Credit Memo template
@@ -74,11 +74,11 @@ As far as you know, a credit memo (or credit memorandum) is a special type of do
 
 To configure an automatic sending credit memo, take a look at how your file will be previewed, the premade template is placed in ``Mageplaza > PDF Invoices: Manage Template > Default PDF Credit Memo``.
   
-![i](https://i.imgur.com/Yww98qO.gif)
+![pdfcreditmemo1](https://i.imgur.com/Yww98qO.gif)
 
 After saving the edit for the template, you can click **Preview** to see your final result again. Then make sure you can use this by choosing it in ``Mageplaza > PDF Invoices: Configuration > Credit Memo: Select Template``.
 
-![i](https://i.imgur.com/p7DnC5p.jpg)
+![pdfcreditmemo2](https://i.imgur.com/p7DnC5p.jpg)
 
 
 Be notice that if there is any possible updates on templates, we will update them on the Github interface instead of adding into the module’s code directly. You can bookmark this post in case you want to implement more design for templates in the PDF Invoices extension.
