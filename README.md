@@ -1,4 +1,4 @@
-# pdf-invoice-templates
+# Mageplaza PDF Invoice Templates for Magento 2
 
 ## Overview
 
