@@ -14,11 +14,12 @@ PDF Invoice for Magento 2 is a must-have for your store. In case you want more i
 * [Installation Guide](https://www.mageplaza.com/install-magento-2-extension/)
 * [User Guide](https://docs.mageplaza.com/pdf-invoice-m2/)
 
-Mageplaza PDF Invoice extension is able to support four types of billing documents
-* PDF Invoice
-* PDF Order
-* PDF Shipment
-* PDF Credit Memo
+Download the following Templates for your custom design:
+
+* [PDF Invoice](https://github.com/mageplaza/pdf-invoice-templates/tree/master/invoice)
+* [PDF Order](https://github.com/mageplaza/pdf-invoice-templates/tree/master/order)
+* [PDF Shipment](https://github.com/mageplaza/pdf-invoice-templates/tree/master/shipment)
+* [PDF Credit Memo](https://github.com/mageplaza/pdf-invoice-templates/tree/master/creditmemo)
 
 What makes our module prominent is that there are premade templates for store owners to use in the backend. More interestingly, those templates are flexibly customizable. Specially, Mageplaza PDF Invoice provides
 * HTML support.
@@ -84,4 +85,3 @@ Be notice that if there is any possible updates on templates, we will update the
 
 Again, Mageplaza always desires to deliver the best service, we want to hear your thoughts directly and regularly. The power of knowledge is sharing, we’re waiting for all your volunteer contributions of more custom templates done by your own hands. We’re looking forward to seeing how magnificent creativity our customers can have.  
 
-Lastly, don’t hesitate if you need support from us, Mageplaza Technical Department is available at https://mageplaza.freshdesk.com/support/home. 
