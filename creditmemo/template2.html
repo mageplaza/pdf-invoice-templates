@@ -106,11 +106,12 @@
             <h3>{{trans "Notes"}}</h3>
             <span><i>{{var creditmemoNote}} </i></span>
         </div>
-        {{/depend}}
-        <div class="footer-right">
-            <div class="bar-code">
-                <p class="mp-invoice-barcode">
-                    <barcode code="{{var creditmemo.increment_id}}" type="C39"/>
+        {{depend order.getIsMpPreOrder()}}
+    <div class="footer-left">  
+        <h3 class="mp-note">{{trans "Order Notice"}}:</h3>
+        <span style="font-style: italic;">{{var order.getMpPreOrderNotice()}}</span>
+    </div>
+{{/depend}}
                 </p>
             </div>
         </div>
