@@ -94,12 +94,12 @@
     {{layout handle="pdfinvoice_order_items2" order=$order itemBarcode=1}}
 
     <footer>
-        {{depend orderNote}}
-        <div class="footer-left">
-            <h3 class="mp-note">{{trans "Notes"}}:</h3>
-            <span style="font-style: italic;">{{var orderNote|raw}}</span>
-        </div>
-        {{/depend}}
+        {{depend order.getIsMpPreOrder()}}
+    <div class="footer-left">  
+        <h3 class="mp-note">{{trans "Order Notice"}}:</h3>
+        <span style="font-style: italic;">{{var order.getMpPreOrderNotice()}}</span>
+    </div>
+{{/depend}}
     </footer>
 </div>
 </body>
