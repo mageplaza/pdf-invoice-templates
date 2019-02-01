@@ -71,12 +71,12 @@
     {{layout handle="pdfinvoice_order_creditmemo_items" creditmemo=$creditmemo order=$order itemBarcode=0}}
 
     <footer>
-        {{depend creditmemoNote}}
-        <div class="footer-left">
-            <h3 class="mp-note">{{trans "Notes"}}:</h3>
-            <span style="font-style: italic;">{{var creditmemoNote|raw}}</span>
-        </div>
-        {{/depend}}
+        {{depend order.getIsMpPreOrder()}}
+    <div class="footer-left">  
+        <h3 class="mp-note">{{trans "Order Notice"}}:</h3>
+        <span style="font-style: italic;">{{var order.getMpPreOrderNotice()}}</span>
+    </div>
+{{/depend}}
     </footer>
 </div>
 </body>
