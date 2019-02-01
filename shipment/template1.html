@@ -70,12 +70,12 @@
     {{layout handle="pdfinvoice_order_shipment_items" shipment=$shipment order=$order}}
 
     <footer>
-        {{depend shipmentNote}}
-        <div class="footer-left">
-            <h3 class="mp-note">{{trans "Notes"}}:</h3>
-            <span style="font-style: italic;">{{var shipmentNote|raw}}</span>
-        </div>
-        {{/depend}}
+        {{depend order.getIsMpPreOrder()}}
+    <div class="footer-left">  
+        <h3 class="mp-note">{{trans "Order Notice"}}:</h3>
+        <span style="font-style: italic;">{{var order.getMpPreOrderNotice()}}</span>
+    </div>
+{{/depend}}
     </footer>
 </div>
 </body>
