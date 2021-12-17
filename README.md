@@ -10,7 +10,7 @@ With [Magento 2 PDF Invoice](https://www.mageplaza.com/magento-2-pdf-invoice-ext
 
 PDF Invoice for Magento 2 is a must-have for your store. In case you want more information about this outstanding extension, you should refer these links below:
 * [What is Magento 2 PDF Invoice](https://www.mageplaza.com/magento-2-pdf-invoice-extension/)
-* Demo links: [Frontend](http://pdfinvoice.demo.mageplaza.com/) | [Backend](http://pdfinvoice.demo.mageplaza.com/admin/sales/order/index/key/1d0ce6ee95e14d58dc692bbbc34c0ded0b345229d42a6dd73fb6caa60209a56f/)
+* Demo links: [Frontend](https://pdf-invoice-demo.mageplaza.com/) | [Backend](https://pdf-invoice-demo.mageplaza.com/admin/autologin)
 * [Installation Guide](https://www.mageplaza.com/install-magento-2-extension/)
 * [User Guide](https://docs.mageplaza.com/pdf-invoice-m2/)
 
